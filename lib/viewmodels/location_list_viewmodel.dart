@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import '../data/models/location.dart';
 import '../data/services/api_service.dart';
 
-/// ViewModel for the location list page.
+/// ViewModel para a página de lista de locais.
 class LocationListViewModel extends ChangeNotifier {
   final ApiService _apiService = ApiService();
 
@@ -25,7 +25,7 @@ class LocationListViewModel extends ChangeNotifier {
     loadLocations();
   }
 
-  /// Sets the filter for the location list.
+  /// Define o filtro para a lista de locais.
   void setFilter({String? name, String? type, String? dimension}) {
     if ((name != null && name != _nameFilter) ||
         (type != null && type != _typeFilter) ||
@@ -41,7 +41,7 @@ class LocationListViewModel extends ChangeNotifier {
     }
   }
 
-  /// Loads the initial page of locations.
+  /// Carrega a página inicial de locais.
   Future<void> loadLocations() async {
     if (_isLoading) return;
 
@@ -72,7 +72,7 @@ class LocationListViewModel extends ChangeNotifier {
     }
   }
 
-  /// Loads the next page of locations.
+  /// Carrega a próxima página de locais.
   Future<void> loadMore() async {
     if (_isLoading || !_hasMore) return;
 

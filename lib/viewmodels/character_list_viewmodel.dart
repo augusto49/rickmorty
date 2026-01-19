@@ -2,9 +2,9 @@ import 'package:flutter/foundation.dart';
 import '../data/models/character.dart';
 import '../data/services/api_service.dart';
 
-/// ViewModel for the character list page.
+/// ViewModel para a página de lista de personagens.
 ///
-/// Manages loading state, pagination, and character data.
+/// Gerencia estado de carregamento, paginação e dados dos personagens.
 class CharacterListViewModel extends ChangeNotifier {
   final ApiService _apiService;
 
@@ -17,19 +17,19 @@ class CharacterListViewModel extends ChangeNotifier {
   CharacterListViewModel({ApiService? apiService})
     : _apiService = apiService ?? ApiService();
 
-  /// List of loaded characters.
+  /// Lista de personagens carregados.
   List<Character> get characters => _characters;
 
-  /// Whether data is currently being loaded.
+  /// Indica se os dados estão sendo carregados.
   bool get isLoading => _isLoading;
 
-  /// Whether there are more pages to load.
+  /// Indica se existem mais páginas para carregar.
   bool get hasMore => _hasMore;
 
-  /// Error message if loading failed.
+  /// Mensagem de erro se o carregamento falhar.
   String? get error => _error;
 
-  /// Whether the list is empty and not loading.
+  /// Indica se a lista está vazia e não está carregando.
   bool get isEmpty => _characters.isEmpty && !_isLoading;
 
   String _nameFilter = '';
@@ -37,9 +37,9 @@ class CharacterListViewModel extends ChangeNotifier {
 
   String get statusFilter => _statusFilter;
 
-  /// Sets the filter for the character list.
+  /// Define o filtro para a lista de personagens.
   ///
-  /// Debounce logic should be handled by the UI or a debouncer helper.
+  /// A lógica de debounce deve ser tratada pela UI ou um helper de debounce.
   void setFilter({String? name, String? status}) {
     // Only update if changes occurred
     if ((name != null && name != _nameFilter) ||
@@ -55,7 +55,7 @@ class CharacterListViewModel extends ChangeNotifier {
     }
   }
 
-  /// Loads the initial page of characters (with optional filters).
+  /// Carrega a página inicial de personagens (com filtros opcionais).
   Future<void> loadCharacters() async {
     if (_isLoading) return;
 
@@ -86,7 +86,7 @@ class CharacterListViewModel extends ChangeNotifier {
     }
   }
 
-  /// Loads the next page of characters (infinite scroll).
+  /// Carrega a próxima página de personagens (rolagem infinita).
   Future<void> loadMore() async {
     if (_isLoading || !_hasMore) return;
 
@@ -112,7 +112,7 @@ class CharacterListViewModel extends ChangeNotifier {
     }
   }
 
-  /// Refreshes the character list (pull-to-refresh).
+  /// Atualiza a lista de personagens (pull-to-refresh).
   Future<void> refresh() async {
     _characters = [];
     _hasMore = true;

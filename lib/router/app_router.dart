@@ -24,7 +24,7 @@ final routerConfig = GoRouter(
         return HomePage(navigationShell: navigationShell);
       },
       branches: [
-        // Tab 1: Characters
+        // Aba 1: Personagens
         StatefulShellBranch(
           routes: [
             GoRoute(
@@ -42,7 +42,7 @@ final routerConfig = GoRouter(
             ),
           ],
         ),
-        // Tab 2: Episodes
+        // Aba 2: Episódios
         StatefulShellBranch(
           routes: [
             GoRoute(
@@ -60,7 +60,7 @@ final routerConfig = GoRouter(
             ),
           ],
         ),
-        // Tab 3: Locations
+        // Aba 3: Locais
         StatefulShellBranch(
           routes: [
             GoRoute(

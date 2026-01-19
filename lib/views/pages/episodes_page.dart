@@ -41,7 +41,7 @@ class _EpisodesPageState extends State<EpisodesPage> {
     if (_debounce?.isActive ?? false) _debounce!.cancel();
     _debounce = Timer(const Duration(milliseconds: 500), () {
       final vm = context.read<EpisodeListViewModel>();
-      // Heuristic: if S01E01 format, filter by episode code, else name
+      // Heurística: se o formato for S01E01, filtra por código do episódio, senão por nome
       if (RegExp(r'^[sS]\d+[eE]\d+$').hasMatch(query)) {
         vm.setFilter(episode: query, name: '');
       } else {

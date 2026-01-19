@@ -11,7 +11,7 @@ class ApiService {
 
   ApiService({http.Client? client}) : _client = client ?? http.Client();
 
-  /// Fetches a paginated list of characters with optional filtering.
+  /// Busca uma lista paginada de personagens com filtragem opcional.
   Future<CharacterResponse> getCharacters({
     int page = 1,
     String? name,
@@ -47,7 +47,7 @@ class ApiService {
     }
   }
 
-  /// Fetches a single character by ID.
+  /// Busca um único personagem pelo ID.
   Future<Character> getCharacter(int id) async {
     final uri = Uri.parse('$_baseUrl/character/$id');
     final response = await _client.get(uri);
@@ -63,7 +63,7 @@ class ApiService {
     }
   }
 
-  /// Fetches multiple characters by IDs.
+  /// Busca múltiplos personagens por IDs.
   Future<List<Character>> getMultipleCharacters(List<int> ids) async {
     if (ids.isEmpty) return [];
 
@@ -87,7 +87,7 @@ class ApiService {
     }
   }
 
-  /// Fetches multiple episodes by IDs.
+  /// Busca múltiplos episódios por IDs.
   Future<List<Episode>> getMultipleEpisodes(List<int> ids) async {
     if (ids.isEmpty) return [];
 
@@ -111,7 +111,7 @@ class ApiService {
     }
   }
 
-  /// Fetches a paginated list of episodes with optional filtering.
+  /// Busca uma lista paginada de episódios com filtragem opcional.
   Future<EpisodeResponse> getEpisodes({
     int page = 1,
     String? name,
@@ -146,7 +146,7 @@ class ApiService {
     }
   }
 
-  /// Fetches a single episode by ID.
+  /// Busca um único episódio pelo ID.
   Future<Episode> getEpisode(int id) async {
     final uri = Uri.parse('$_baseUrl/episode/$id');
     final response = await _client.get(uri);
@@ -162,7 +162,7 @@ class ApiService {
     }
   }
 
-  /// Fetches a paginated list of locations with optional filtering.
+  /// Busca uma lista paginada de locais com filtragem opcional.
   Future<LocationResponse> getLocations({
     int page = 1,
     String? name,
@@ -199,7 +199,7 @@ class ApiService {
     }
   }
 
-  /// Fetches a single location by ID.
+  /// Busca um único local pelo ID.
   Future<Location> getLocation(int id) async {
     final uri = Uri.parse('$_baseUrl/location/$id');
     final response = await _client.get(uri);
@@ -215,7 +215,7 @@ class ApiService {
     }
   }
 
-  /// Fetches multiple locations by IDs.
+  /// Busca múltiplos locais por IDs.
   Future<List<Location>> getMultipleLocations(List<int> ids) async {
     if (ids.isEmpty) return [];
 
@@ -244,7 +244,7 @@ class ApiService {
   }
 }
 
-/// Response wrapper for paginated character list.
+/// Wrapper de resposta para lista paginada de personagens.
 class CharacterResponse {
   final List<Character> characters;
   final int totalPages;
@@ -274,7 +274,7 @@ class CharacterResponse {
   }
 }
 
-/// Response wrapper for paginated episode list.
+/// Wrapper de resposta para lista paginada de episódios.
 class EpisodeResponse {
   final List<Episode> episodes;
   final int totalPages;
@@ -304,7 +304,7 @@ class EpisodeResponse {
   }
 }
 
-/// Response wrapper for paginated location list.
+/// Wrapper de resposta para lista paginada de locais.
 class LocationResponse {
   final List<Location> locations;
   final int totalPages;
@@ -334,7 +334,7 @@ class LocationResponse {
   }
 }
 
-/// Custom exception for API errors.
+/// Exceção customizada para erros da API.
 class ApiException implements Exception {
   final String message;
   final int? statusCode;

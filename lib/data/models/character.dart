@@ -42,14 +42,14 @@ class Character {
     );
   }
 
-  /// Returns true if character is alive.
+  /// Retorna verdadeiro se o personagem estiver vivo.
   bool get isAlive => status.toLowerCase() == 'alive';
 
-  /// Returns true if character is dead.
+  /// Retorna verdadeiro se o personagem estiver morto.
   bool get isDead => status.toLowerCase() == 'dead';
 }
 
-/// Location model for character origin and current location.
+/// Modelo de localização para origem e localização atual do personagem.
 class CharacterLocation {
   final String name;
   final String url;

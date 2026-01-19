@@ -73,7 +73,7 @@ class _LocationsPageState extends State<LocationsPage> {
                 }
 
                 if (viewModel.isLoading && viewModel.locations.isEmpty) {
-                  return _buildLoadingSkeleton(); // Extract loading to method
+                  return _buildLoadingSkeleton();
                 }
 
                 if (viewModel.isEmpty) {
@@ -89,7 +89,7 @@ class _LocationsPageState extends State<LocationsPage> {
                   builder: (context, constraints) {
                     final isDesktop = constraints.maxWidth > 900;
                     final crossAxisCount = isDesktop ? 2 : 1;
-                    // Center content on wide screens
+                    // Centraliza o conteúdo em telas largas
                     return Center(
                       child: Container(
                         constraints: const BoxConstraints(maxWidth: 1200),
@@ -102,10 +102,10 @@ class _LocationsPageState extends State<LocationsPage> {
                                 childAspectRatio:
                                     isDesktop
                                         ? 2.5
-                                        : 3.0, // Adjust aspect ratio for cards
+                                        : 3.0, // Ajusta a proporção dos cards
                                 crossAxisSpacing: 16,
                                 mainAxisSpacing: 16,
-                                mainAxisExtent: 110, // Fixed height per item
+                                mainAxisExtent: 110, // Altura fixa por item
                               ),
                           itemCount:
                               viewModel.locations.length +

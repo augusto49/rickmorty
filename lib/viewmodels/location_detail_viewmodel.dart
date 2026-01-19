@@ -3,7 +3,7 @@ import '../data/models/location.dart';
 import '../data/models/character.dart';
 import '../data/services/api_service.dart';
 
-/// ViewModel for location details.
+/// ViewModel para detalhes do local.
 class LocationDetailViewModel extends ChangeNotifier {
   final ApiService _apiService = ApiService();
 
@@ -17,7 +17,7 @@ class LocationDetailViewModel extends ChangeNotifier {
   bool get isLoading => _isLoading;
   String? get error => _error;
 
-  /// Loads location details and its residents.
+  /// Carrega detalhes do local e seus residentes.
   Future<void> loadLocation(int id) async {
     _isLoading = true;
     _error = null;
@@ -34,7 +34,7 @@ class LocationDetailViewModel extends ChangeNotifier {
     }
   }
 
-  /// Sets location directly and loads residents.
+  /// Define o local diretamente e carrega os residentes.
   void setLocation(Location location) {
     _location = location;
     _residents = [];

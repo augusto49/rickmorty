@@ -3,7 +3,7 @@ import '../data/models/episode.dart';
 import '../data/models/character.dart';
 import '../data/services/api_service.dart';
 
-/// ViewModel for episode details.
+/// ViewModel para detalhes do episódio.
 class EpisodeDetailViewModel extends ChangeNotifier {
   final ApiService _apiService = ApiService();
 
@@ -17,7 +17,7 @@ class EpisodeDetailViewModel extends ChangeNotifier {
   bool get isLoading => _isLoading;
   String? get error => _error;
 
-  /// Loads episode details and its characters.
+  /// Carrega detalhes do episódio e seus personagens.
   Future<void> loadEpisode(int id) async {
     _isLoading = true;
     _error = null;
@@ -34,7 +34,7 @@ class EpisodeDetailViewModel extends ChangeNotifier {
     }
   }
 
-  /// Sets episode directly and loads characters.
+  /// Define o episódio diretamente e carrega os personagens.
   void setEpisode(Episode episode) {
     _episode = episode;
     _characters = [];

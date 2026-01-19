@@ -4,9 +4,9 @@ import '../data/models/episode.dart';
 import '../data/models/location.dart';
 import '../data/services/api_service.dart';
 
-/// ViewModel for the character detail page.
+/// ViewModel para a página de detalhes do personagem.
 ///
-/// Can be initialized with an existing character or fetch by ID.
+/// Pode ser inicializado com um personagem existente ou buscar por ID.
 class CharacterDetailViewModel extends ChangeNotifier {
   final ApiService _apiService;
 
@@ -18,19 +18,19 @@ class CharacterDetailViewModel extends ChangeNotifier {
     : _character = character,
       _apiService = apiService ?? ApiService();
 
-  /// The character being displayed.
+  /// O personagem sendo exibido.
   Character? get character => _character;
 
-  /// Whether data is being loaded.
+  /// Indica se os dados estão sendo carregados.
   bool get isLoading => _isLoading;
 
-  /// Error message if loading failed.
+  /// Mensagem de erro se o carregamento falhar.
   String? get error => _error;
 
   List<Episode> _episodes = [];
   bool _isLoadingEpisodes = false;
 
-  /// List of episodes where the character appears.
+  /// Lista de episódios onde o personagem aparece.
   List<Episode> get episodes => _episodes;
   bool get isLoadingEpisodes => _isLoadingEpisodes;
 
@@ -40,7 +40,7 @@ class CharacterDetailViewModel extends ChangeNotifier {
   Location? get originLocation => _originLocation;
   Location? get currentLocation => _currentLocation;
 
-  /// Loads character data and their episodes.
+  /// Carrega dados do personagem e seus episódios.
   Future<void> loadCharacter(int id) async {
     if (_isLoading) return;
 
@@ -62,7 +62,7 @@ class CharacterDetailViewModel extends ChangeNotifier {
     }
   }
 
-  /// Sets the character directly and loads their episodes.
+  /// Define o personagem diretamente e carrega seus episódios.
   void setCharacter(Character character) {
     _character = character;
     _error = null;

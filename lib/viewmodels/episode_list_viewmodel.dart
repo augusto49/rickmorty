@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import '../data/models/episode.dart';
 import '../data/services/api_service.dart';
 
-/// ViewModel for the episode list page.
+/// ViewModel para a página de lista de episódios.
 class EpisodeListViewModel extends ChangeNotifier {
   final ApiService _apiService = ApiService();
 
@@ -24,7 +24,7 @@ class EpisodeListViewModel extends ChangeNotifier {
     loadEpisodes();
   }
 
-  /// Sets the filter for the episode list.
+  /// Define o filtro para a lista de episódios.
   void setFilter({String? name, String? episode}) {
     if ((name != null && name != _nameFilter) ||
         (episode != null && episode != _episodeFilter)) {
@@ -38,7 +38,7 @@ class EpisodeListViewModel extends ChangeNotifier {
     }
   }
 
-  /// Loads the initial page of episodes.
+  /// Carrega a página inicial de episódios.
   Future<void> loadEpisodes() async {
     if (_isLoading) return;
 
@@ -68,7 +68,7 @@ class EpisodeListViewModel extends ChangeNotifier {
     }
   }
 
-  /// Loads the next page of episodes.
+  /// Carrega a próxima página de episódios.
   Future<void> loadMore() async {
     if (_isLoading || !_hasMore) return;
 
