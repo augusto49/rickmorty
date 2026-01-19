@@ -4,7 +4,6 @@ import '../models/character.dart';
 import '../models/episode.dart';
 import '../models/location.dart';
 
-/// Service class for Rick and Morty API communication.
 class ApiService {
   static const String _baseUrl = 'https://rickandmortyapi.com/api';
 

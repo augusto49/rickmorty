@@ -1,4 +1,3 @@
-/// Episode model from Rick and Morty API.
 class Episode {
   final int id;
   final String name;

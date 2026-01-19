@@ -1,4 +1,3 @@
-/// Location model from Rick and Morty API.
 class Location {
   final int id;
   final String name;

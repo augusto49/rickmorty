@@ -6,7 +6,7 @@
 
 Uma aplicação Flutter premium, moderna e responsiva para explorar o universo de Rick e Morty. Construída com foco em excelência de UI/UX, performance e arquitetura limpa.
 
-![Prévia Home](docs/assets/home_preview.png)
+![Prévia Home](docs/assets/home_preview_v2.png)
 
 ## ✨ Principais Funcionalidades
 
@@ -37,9 +37,9 @@ Uma aplicação Flutter premium, moderna e responsiva para explorar o universo d
 
 ## 📸 Capturas de Tela
 
-|         Visualização Desktop          |               Detalhe Mobile               |
-| :-----------------------------------: | :----------------------------------------: |
-| ![Home](docs/assets/home_preview.png) | ![Detalhe](docs/assets/detail_preview.png) |
+|           Visualização Desktop           |                Detalhe Mobile                 |
+| :--------------------------------------: | :-------------------------------------------: |
+| ![Home](docs/assets/home_preview_v2.png) | ![Detalhe](docs/assets/detail_preview_v2.png) |
 
 ## 🚀 Começando
 

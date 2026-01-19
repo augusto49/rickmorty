@@ -1,4 +1,3 @@
-/// Character model representing a character from Rick and Morty API.
 class Character {
   final int id;
   final String name;

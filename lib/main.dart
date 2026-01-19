@@ -6,7 +6,7 @@ import 'viewmodels/episode_list_viewmodel.dart';
 import 'viewmodels/location_list_viewmodel.dart';
 import 'viewmodels/episode_detail_viewmodel.dart';
 import 'viewmodels/location_detail_viewmodel.dart';
-import 'router/app_router.dart'; // Added import
+import 'router/app_router.dart';
 
 void main() {
   runApp(
