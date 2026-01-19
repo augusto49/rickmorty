@@ -4,97 +4,97 @@
 ![Dart](https://img.shields.io/badge/Dart-3.0-0175C2?logo=dart)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
-A premium, modern, and responsive Flutter application for exploring the Rick and Morty universe. Built with a focus on UI/UX excellence, performance, and clean architecture.
+Uma aplicação Flutter premium, moderna e responsiva para explorar o universo de Rick e Morty. Construída com foco em excelência de UI/UX, performance e arquitetura limpa.
 
-![Home Preview](docs/assets/home_preview.png)
+![Prévia Home](docs/assets/home_preview.png)
 
-## ✨ Key Features
+## ✨ Principais Funcionalidades
 
-- **🚀 Modern Navigation**: Seamless transitions and deep linking support using `go_router`.
-- **📱 Fully Responsive**: Adaptive layouts that look great on Mobile, Tablet, and Desktop.
-  - **Dynamic Grids**: Lists transform into grids on larger screens.
-  - **Content Constraints**: Readable max-widths for comfortable viewing on monitors.
-- **🎨 Premium UI**:
-  - **Dark Theme**: Immersive "Space Dark" color palette (`#1E1E1E`).
-  - **Skeleton Loading**: Smooth shimmer effects during data fetching.
-  - **High-Res Imagery**: Optimized image caching with `cached_network_image`.
-- **🔍 Powerful Search**:
-  - **Debounced Search**: Efficient real-time filtering for Characters, Episodes, and Locations.
-  - **Smart Filtering**: Heuristic search for episode codes (e.g., "S01E01").
+- **🚀 Navegação Moderna**: Transições fluidas e suporte a deep linking usando `go_router`.
+- **📱 Totalmente Responsivo**: Layouts adaptativos que ficam ótimos em Mobile, Tablet e Desktop.
+  - **Grids Dinâmicos**: Listas se transformam em grids em telas maiores.
+  - **Restrições de Conteúdo**: Largura máxima controlada para leitura confortável em monitores.
+- **🎨 UI Premium**:
+  - **Tema Escuro**: Paleta de cores imersiva "Space Dark" (`#1E1E1E`).
+  - **Carregamento Skeleton**: Efeitos de chimmer suaves durante o carregamento de dados.
+  - **Imagens em Alta Resolução**: Cache de imagens otimizado com `cached_network_image`.
+- **🔍 Busca Poderosa**:
+  - **Busca com Debounce**: Filtragem eficiente em tempo real para Personagens, Episódios e Locais.
+  - **Filtragem Inteligente**: Busca heurística para códigos de episódios (ex: "S01E01").
 - **⚡ Performance**:
-  - **Pagination**: Infinite scrolling for large datasets.
-  - **State Management**: efficient state handling with `Provider`.
+  - **Paginação**: Rolagem infinita para grandes conjuntos de dados.
+  - **Gerenciamento de Estado**: Manipulação eficiente de estado com `Provider`.
 
-## 🛠️ Tech Stack
+## 🛠️ Tecnologias Utilizadas
 
 - **Framework**: Flutter
-- **Language**: Dart
-- **State Management**: Provider
-- **Navigation**: GoRouter
-- **Networking**: HTTP
+- **Linguagem**: Dart
+- **Gerenciamento de Estado**: Provider
+- **Navegação**: GoRouter
+- **Rede**: HTTP
 - **Assets**: Cached Network Image, Flutter Launcher Icons
-- **Architecture**: MVVM (Model-View-ViewModel)
+- **Arquitetura**: MVVM (Model-View-ViewModel)
 
-## 📸 Screenshots
+## 📸 Capturas de Tela
 
-|             Desktop View              |               Mobile Detail               |
-| :-----------------------------------: | :---------------------------------------: |
-| ![Home](docs/assets/home_preview.png) | ![Detail](docs/assets/detail_preview.png) |
+|         Visualização Desktop          |               Detalhe Mobile               |
+| :-----------------------------------: | :----------------------------------------: |
+| ![Home](docs/assets/home_preview.png) | ![Detalhe](docs/assets/detail_preview.png) |
 
-## 🚀 Getting Started
+## 🚀 Começando
 
-### Prerequisites
+### Pré-requisitos
 
 - Flutter SDK `^3.7.2`
 - Dart SDK
 
-### Installation
+### Instalação
 
-1. **Clone the repository**
+1. **Clone o repositório**
 
    ```bash
-   git clone https://github.com/yourusername/rick-morty-explorer.git
-   cd rick-morty-explorer
+   git clone https://github.com/augusto49/rickmorty.git
+   cd rickmorty
    ```
 
-2. **Install dependencies**
+2. **Instale as dependências**
 
    ```bash
    flutter pub get
    ```
 
-3. **Run the app**
+3. **Execute o app**
    ```bash
    flutter run
    ```
 
-## 📂 Project Structure
+## 📂 Estrutura do Projeto
 
 ```
 lib/
-├── data/           # Models and API services
-├── viewmodels/     # State management logic (Providers)
-├── views/          # UI Components
-│   ├── pages/      # Full application screens
-│   └── widgets/    # Reusable UI elements
-├── router/         # Navigation configuration
-└── main.dart       # Entry point
+├── data/           # Modelos e serviços de API
+├── viewmodels/     # Lógica de gerenciamento de estado (Providers)
+├── views/          # Componentes de UI
+│   ├── pages/      # Telas completas da aplicação
+│   └── widgets/    # Elementos de UI reutilizáveis
+├── router/         # Configuração de navegação
+└── main.dart       # Ponto de entrada
 ```
 
-## 🤝 Contributing
+## 🤝 Contribuindo
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contribuições são bem-vindas! Sinta-se à vontade para enviar um Pull Request.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Faça um Fork do Projeto
+2. Crie sua Branch de Feature (`git checkout -b feature/MinhaFeatureIncrivel`)
+3. Faça o Commit de suas Mudanças (`git commit -m 'Adiciona alguma FeatureIncrível'`)
+4. Faça o Push para a Branch (`git push origin feature/MinhaFeatureIncrivel`)
+5. Abra um Pull Request
 
-## 📄 License
+## 📄 Licença
 
-This project is open source and available under the [MIT License](LICENSE).
+Este projeto é open source e está disponível sob a [Licença MIT](LICENSE).
 
 ---
 
-_Developed with ❤️ using Flutter_
+_Desenvolvido com ❤️ usando Flutter_
